@@ -2,6 +2,7 @@
   box-sizing: border-box;
   transition: all 260ms;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 74px;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0;
@@ -64,6 +65,13 @@ ul {
 }
 
 .text-lg {
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+.text-md {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
@@ -84,6 +92,10 @@ ul {
 .navbar span {
   font-size: 16px;
   color: #ff3b00;
+}
+.navbar a:hover,
+.navbar span:hover {
+  opacity: 0.5;
 }
 @media screen and (min-width: 840px) {
   .navbar .nav-logo {
@@ -165,7 +177,7 @@ ul {
 
 .services {
   background-color: rgba(220, 229, 195, 0.4117647059);
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 8rem;
   position: relative;
 }
@@ -196,32 +208,181 @@ ul {
   rotate: 90deg;
 }
 
-#tools {
-  background-color: #5f6a3e;
-}
-#tools .tools-content {
-  display: flex;
-  justify-content: space-around;
-}
-
-.intermezzo {
+.tickerwrapper {
   color: #f4f1e6;
   background-color: #ff3b00;
-  padding: 8rem 0;
+  position: relative;
+  padding: 12px 0 10px;
+  top: 0;
+  left: 0;
+  width: 99.9%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.tickerwrapper ul.list {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tickerwrapper ul.list li {
+  font-size: 16px;
+  float: left;
+  padding-left: 160px;
+}
+.tickerwrapper ul.list li a {
+  color: #f4f1e6;
+  text-decoration: underline;
+}
+.tickerwrapper ul.list li a:hover {
+  text-decoration: none;
+}
+.tickerwrapper ul.list.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .work {
+  color: #5f6a3e;
+  background-color: #f4f1e6;
   padding-top: 6rem;
   padding-bottom: 8rem;
 }
-.work .work-intro {
-  text-align: right;
+.work .case-study {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
-.work .work-intro p {
-  max-width: 40%;
-  float: right;
+.work .case-study .poster-lg {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
-.work .carousel {
-  display: inline-flex;
+.work .case-study .poster-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work .case-study .poster-padding {
+  padding: 44px;
+}
+.work .case-study .poster-xs {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.work .case-study img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+  transition-duration: 300ms;
+}
+.work .case-study img:hover {
+  transform: scale(1.02);
+}
+.work .case-study video {
+  width: 100%;
+  height: auto;
+  transition-duration: 300ms;
+}
+.work .case-study video:hover {
+  transform: scale(1.02);
+}
+.work .case-study .details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 10px 10px;
+}
+.work .case-study .details-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.work .case-study .details-header .details-box {
+  display: flex;
+  gap: 10px;
+}
+.work .case-study .details-header .details-box span {
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #5f6a3e;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+.work .case-study p {
+  font-size: 16px;
+  padding: 0 10px;
+}
+.work .case-study:hover h3 {
+  text-decoration: underline;
+}
+.work .project-wrapper .project-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   gap: 20px;
+  padding: 20px;
+}
+.work .project-wrapper .project-box .project-details {
+  display: flex;
+  justify-content: end;
+  gap: 14px;
+}
+.work .project-wrapper .project-box .project-details span {
+  color: #5f6a3e;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #5f6a3e;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+.work .project-wrapper .project-box video {
+  width: 100%;
+  height: 100%;
+}
+.work .project-wrapper .project-box.project-one {
+  background-color: #d0ddad;
+}
+.work .project-wrapper .project-box.project-two {
+  background-color: lightblue;
+}
+
+.profile {
+  color: #000;
+  background-color: #f4f1e6;
+  padding: 8rem 0;
+}
+.profile h2 {
+  margin-top: -24px;
+}
+.profile h3 {
+  margin-left: 40px;
+}
+.profile a {
+  color: #ff3b00;
+  text-decoration: underline;
+}
+.profile a:hover {
+  color: #000;
+}
+
+.contact {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+.contact .contact-info .contact-details {
+  display: flex;
+  gap: 60px;
+}
+.contact .contact-info .contact-details a {
+  color: #ff3b00;
+  display: flex;
+  gap: 10px;
+}
+.contact .contact-info .contact-details a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
