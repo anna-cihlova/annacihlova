@@ -187,7 +187,7 @@ ul {
   top: 4rem;
   right: 0;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .services {
@@ -238,54 +238,18 @@ ul {
   }
 }
 
-.tickerwrapper {
-  color: #f4f1e6;
-  background-color: #ff3b00;
-  position: relative;
-  padding: 12px 0 10px;
-  top: 0;
-  left: 0;
-  width: 99.9%;
-  overflow: hidden;
-  cursor: pointer;
-}
-.tickerwrapper ul.list {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.tickerwrapper ul.list li {
-  font-size: 16px;
-  float: left;
-  padding-left: 160px;
-}
-.tickerwrapper ul.list li a {
-  color: #f4f1e6;
-  text-decoration: underline;
-}
-.tickerwrapper ul.list li a:hover {
-  text-decoration: none;
-}
-.tickerwrapper ul.list.cloned {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
 .work {
   color: #f4f1e6;
   background-color: #5f6a3e;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.work .case-study {
+.work .project {
   color: #f4f1e6;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-.work .case-study .case-study-poster {
+.work .project .project-poster {
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -293,54 +257,54 @@ ul {
   padding: 40px;
   border-radius: 4px;
 }
-.work .case-study .case-study-poster img,
-.work .case-study .case-study-poster video {
+.work .project .project-poster img,
+.work .project .project-poster video {
   width: 100%;
   height: auto;
   border-radius: 4px;
 }
-.work .case-study .case-study-poster img:hover,
-.work .case-study .case-study-poster video:hover {
+.work .project .project-poster img:hover,
+.work .project .project-poster video:hover {
   transform: scale(1.02);
 }
 @media screen and (min-width: 1024px) {
-  .work .case-study .case-study-poster {
+  .work .project .project-poster {
     width: 100%;
     height: 400px;
   }
 }
-.work .case-study .case-study-header {
+.work .project .case-study-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 24px 10px 10px;
 }
-.work .case-study .case-study-header h3 {
+.work .project .case-study-header h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
 }
-.work .case-study .case-study-header .case-study-box {
+.work .project .case-study-header .case-study-box {
   display: flex;
   gap: 10px;
 }
-.work .case-study .case-study-header .case-study-box span {
+.work .project .case-study-header .case-study-box span {
   font-size: 14px;
   font-weight: 500;
   border: 1px solid #f4f1e6;
   padding: 4px 12px;
   border-radius: 4px;
 }
-.work .case-study p {
+.work .project p {
   font-size: 1rem;
   padding: 0 10px;
 }
 @media (min-width: 540px) and (max-width: 839px) {
-  .work .case-study p {
+  .work .project p {
     font-size: 1.25rem;
   }
 }
-.work .case-study:hover h3 {
+.work .project:hover h3 {
   text-decoration: underline;
 }
 @media screen and (min-width: 1024px) {
