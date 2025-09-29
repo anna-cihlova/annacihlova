@@ -35,3 +35,4 @@ yarn-error.log*
 
 # Sass/Style cache
 .sass-cache/
+node_modules/
