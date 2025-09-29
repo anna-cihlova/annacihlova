@@ -230,6 +230,7 @@ ul {
         background: color(primary);
         transition: right 0.3s ease-in-out;
         border-left: 0.5px solid color(secondary);
+        z-index: 1200;
 
         &.active {
           right: 0;

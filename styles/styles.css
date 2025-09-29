@@ -213,6 +213,7 @@ ul {
     background: #f4f1e6;
     transition: right 0.3s ease-in-out;
     border-left: 0.5px solid #ff3b00;
+    z-index: 1200;
   }
   .navbar .nav-content .nav-menu.active {
     right: 0;
