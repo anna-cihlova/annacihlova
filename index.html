@@ -43,10 +43,17 @@
     <script src="index.js" defer></script>
     <script src="hamburger.js" defer></script>
 
-    <!-- Scroll Text JavaScript Animation -->
+    <!-- GSAP 3 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <!-- Ticker script -->
     <script src="tickerAnimation.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <!-- JS Scripts -->
+    <script type="module" src="projects.js" defer></script>
+    <script type="module" src="renderProjects.js" defer></script>
 
     <!-- Favicon -->
     <link
@@ -99,13 +106,26 @@
           class="nav-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-4-desktop"
         >
           <li class="nav-item">
-            <a href="#services" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#work" class="nav-link">Blog</a>
+            <a href="#projects" class="nav-link">Work</a>
           </li>
           <li class="nav-item">
-            <a href="#profile" class="nav-link">Work</a>
+            <a
+              href="https://github.com/anna-cihlova"
+              target="_blank"
+              class="nav-link"
+              >GitHub</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.linkedin.com/in/anna-cihlova/"
+              target="_blank"
+              class="nav-link"
+              >LinkedIn</a
+            >
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link">Let's Talk</a>
@@ -125,254 +145,76 @@
       <section id="intro" class="intro mdc-layout-grid">
         <div class="intro-content mdc-layout-grid__inner">
           <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-12-desktop"
+            class="intro-header mdc-layout-grid__cell mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-9-desktop"
           >
             <h1 class="text-xl">
               Hello,<br />
               I'm Anna.
             </h1>
-            <img src="assets/intro.jpg" class="intro-img" />
-          </div>
-          <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-9-desktop"
-          >
             <p class="text-md">
-              Frontend Engineer diving into the world of AI Engineering, working
-              from hot Austin, Texas.
+              Frontend Engineer with 8+ years of experience, diving into the
+              world of AI Engineering, working from sunny Austin, Texas.
             </p>
+            <ul class="intro-skills">
+              <li class="skill-box">JavaScript</li>
+              <li class="skill-box">TypeScript</li>
+              <li class="skill-box">React.js</li>
+              <li class="skill-box">Next.js</li>
+              <li class="skill-box">HTML</li>
+              <li class="skill-box">CSS/SCSS</li>
+            </ul>
+          </div>
+          <img
+            src="assets/intro.jpg"
+            class="intro-img"
+            height="500px"
+            width="340px"
+          />
+        </div>
+      </section>
+      <div class="tickerwrapper">
+        <ul class="list">
+          <li class="listitem">Currently based in Austin, Texas.</li>
+          <li class="listitem">
+            Connect with me on
+            <a href="https://www.linkedin.com/in/anna-cihlova/" target="_blank"
+              >LinkedIn</a
+            >.
+          </li>
+          <li class="listitem">Frontend engineer working with AI.</li>
+          <li class="listitem">
+            Check out my work on
+            <a href="https://github.com/anna-cihlova" target="_blank">GitHub</a
+            >.
+          </li>
+        </ul>
+      </div>
+      <section id="projects" class="projects mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+            <h2>Projects</h2>
+          </div>
+          <div
+            id="projects-container"
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7"
+          >
+            <div class="mdc-layout-grid__inner"></div>
           </div>
         </div>
       </section>
-      <!-- 
-      <section id="services" class="services mdc-layout-grid">
-        <div class="mdc-layout-grid__inner">
-          <div
-            class="services-title mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop"
-          >
-            <h2>Work</h2>
-          </div>
-          <div
-            class="services-intro mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <p>
-              Need help with a complex website or a simple landing page? I'm
-              here for you! From design to launch, I'll guide you every step of
-              the way. Let's&nbsp;turn your vision into a reality and get your
-              website up and running in no&nbsp;time.
-            </p>
-            <img src="assets/mockup.jpg" width="200" />
-          </div>
-          <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="mdc-layout-grid__inner">
-              <div
-                class="services-content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop"
-              >
-                <h3>01 Consultation</h3>
-                <p>
-                  Whether you're facing challenges with your current website or
-                  you want to build a new one, I&nbsp;am here to assist you.
-                  Let's&nbsp;have a conversation about your ideas and goals
-                  regarding your website. After understanding your needs,
-                  I&nbsp;can provide some advice on how to move forward.
-                </p>
-              </div>
-              <div
-                class="services-content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop"
-              >
-                <h3>02 Design & Content</h3>
-                <p>
-                  I&nbsp;design stunning, user-friendly websites tailored to
-                  your goals. I&nbsp;also offer a content creation to get your
-                  site started, from crafting clear website copy to choosing
-                  captivating images. Let's&nbsp;turn your online vision into
-                  reality!
-                </p>
-              </div>
-              <div
-                class="services-content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop"
-              >
-                <h3>03 Website Build &amp; Launch</h3>
-                <p>
-                  Once we agree on your design, I&nbsp;will start building your
-                  awesome website! I&nbsp;code websites from scratch or work
-                  with popular platforms like
-                  <a href="https://wordpress.com/" target="_blank">WordPress</a
-                  >, <a href="https://www.wix.com/" target="_blank">Wix</a>, and
-                  <a href="https://webflow.com/" target="_blank">Webflow</a>.
-                  I&nbsp;can customize templates and/or work with custom code to
-                  create the website you envision.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section id="work" class="work mdc-layout-grid">
-        <div class="mdc-layout-grid__inner">
-          <div
-            class="work-intro mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop"
-          >
-            <h2>work</h2>
-            <p>I&nbsp;help brands grow and tell their stories.</p>
-          </div>
-          <div
-            class="case-study mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="case-study-poster">
-              <picture>
-                <img
-                  src="assets/case-study/case-study01.png"
-                  alt="Landing page for TopMonks"
-                  width="380"
-                  height="auto"
-                  sizes="(max-width: 480px) 100vw, 380px"
-                />
-              </picture>
-            </div>
-            <div class="case-study-header">
-              <h3>TopMonks</h3>
-              <div class="case-study-box">
-                <span class="details--box">HTML</span>
-                <span class="details--box">CSS/SCSS</span>
-                <span class="details--box">JavaScript</span>
-              </div>
-            </div>
-            <p>
-              I&nbsp;have worked for 7 years at a software company in Prague,
-              Czech Republic. During my tenure, I&nbsp;had the opportunity to
-              work on various exciting projects, including the development of
-              TopMonks' landing page in both Czech and English. On the website,
-              I&nbsp;incorporated several eye-catching features like a
-              responsive sticky navigation bar for mobile and tablet screens,
-              animated buttons, or seamlessly blending backgrounds.
-            </p>
-          </div>
-          <a
-            class="case-study mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="case-study-poster">
-              <video width="600" height="400" autoplay loop>
-                <source src="assets/case-study/wedding-website.mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="case-study-header">
-              <h3>Wedding website</h3>
-              <div class="case-study-box">
-                <span class="details--box">Wix</span>
-              </div>
-            </div>
-            <p>
-              I&nbsp;designed the structure and content of a wedding website,
-              taking into consideration both the distinct characteristics of the
-              couple themselves and the unique attributes of the wedding venue.
-              The website was not missing the RSVP section, connected registry
-              catalog, or the photo slide show of the happy couple.
-            </p>
-          </a>
-          <a
-            href="https://postcube.cz/"
-            target="_blank"
-            class="case-study mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="case-study-poster">
-              <video width="600" height="400" autoplay loop>
-                <source src="assets/case-study/postcube-website.mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="case-study-header">
-              <div>
-                <h3>PostCube</h3>
-              </div>
-              <div class="case-study-box">
-                <span class="details--box">HTML</span>
-                <span class="details--box">CSS/SCSS</span>
-                <span class="details--box">JavaScript</span>
-              </div>
-            </div>
-            <p>
-              I&nbsp;developed a landing page for PostCube, a private mailbox
-              service that caters to both personal and business requirements.
-              The website boasts an animated navigation bar, a video section,
-              and a convenient contact&nbsp;form.
-            </p>
-          </a>
-          <a
-            href="https://blockchain.topmonks.com/"
-            target="_blank"
-            class="case-study mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="case-study-poster">
-              <picture>
-                <img
-                  src="assets/case-study/case-study02.png"
-                  alt="Landing page for TopMonks Blockchain"
-                  width="380"
-                  height="auto"
-                  sizes="(max-width: 480px) 100vw, 380px"
-                />
-              </picture>
-            </div>
-            <div class="case-study-header">
-              <h3>TopMonks Blockchain</h3>
-              <div class="case-study-box">
-                <span class="details--box">HTML</span>
-                <span class="details--box">CSS/SCSS</span>
-              </div>
-            </div>
-            <p>
-              I&nbsp;coded a website for TopMonks Blockchain, a development
-              studio specializing in blockchain-based technologies.
-            </p>
-          </a>
 
-          <a
-            href="https://prodeti.topmonks.cz/"
-            target="_blank"
-            class="case-study mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-          >
-            <div class="case-study-poster">
-              <picture>
-                <img
-                  src="assets/case-study/case-study03.png"
-                  alt="Landing page for Programming for Children project"
-                  width="380"
-                  height="auto"
-                  sizes="(max-width: 480px) 100vw, 380px"
-                />
-              </picture>
-            </div>
-            <div class="case-study-header">
-              <h3>Programming for Children</h3>
-              <div class="case-study-box">
-                <span class="details--box">HTML</span>
-                <span class="details--box">CSS/SCSS</span>
-              </div>
-            </div>
-            <p>
-              I&nbsp;assisted in creating an interactive website to spark
-              children's&nbsp;interest in programming. The project's&nbsp;goal
-              was to make coding fun for&nbsp;kids.
-            </p>
-          </a>
-        </div>
-      </section>
-
-      <section id="profile" class="profile mdc-layout-grid">
+      <section id="about" class="about mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
           <div
             class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-6-desktop"
           >
-            <h2 class="text-xl">journey</h2>
+            <h2 class="text-xl">Journey</h2>
           </div>
           <div
             class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-6-desktop"
           >
             <h3 class="text-md">
-              My true strength lies in creating websites that are not just
+              My true strength lies in creating experiences that are not just
               functional, but visually captivating and elegant.<br />After all,
               good design matters.
             </h3>
@@ -382,39 +224,47 @@
             class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop"
           >
             <p>
-              Hello there, I'm Anna. I&nbsp;specialize in designing and building
-              powerful, interactive websites. With 7&nbsp;years of experience,
-              I&nbsp;continually educate myself in modern coding and innovative
-              web design methods.
+              Hello, I’m Anna, a frontend engineer specializing in building
+              powerful, interactive websites and applications. With over 8 years
+              of experience, I’ve developed expertise in JavaScript, TypeScript,
+              React.js, Next.js, HTML, CSS/SCSS, and more! I’m also expanding my
+              skills into AI engineering, bringing curiosity and innovation into
+              every project I take on.
             </p>
             <p>
-              My coding journey ignited during high school when I&nbsp;wrote my
-              first line of code. From there, it was a deep dive&nbsp;&ndash;
-              months spent devouring online resources about frontend
-              development. Building my first website from scratch solidified my
-              path as a&nbsp;coder.
-            </p>
-            <p>
-              <strong>7 years ago</strong>, I&nbsp;was offered my first job as a
-              front-end developer at TopMonks, a creative tech company based in
-              Prague. I&nbsp;collaborated on a complete website redesign for
-              them, along with coding projects for various Czech businesses,
-              driving innovation and optimization.
-            </p>
-            <p>
-              Apart from that, I&nbsp;worked with companies like
-              <a href="https://www.aikitdigital.com/">AIKIT Digital</a>,
-              <a href="https://www.kindred.cz/en/">Kindred</a>,
-              <a href="https://www.facebook.com/refresh.cz/?locale=cs_CZ"
+              My journey started back in high school, when I wrote my first line
+              of code and spent months diving deep into online resources.
+              Building my first website from scratch confirmed that coding was
+              the path for me. Since then, I’ve worked with companies like
+              <a href="https://www.kindred.cz/en/" target="_blank"
+                >Publicis Groupe</a
+              >
+              ,
+              <a href="https://www.talent.com/" target="_blank">Talent.com</a> ,
+              <a href="https://www.topmonks.com/" target="_blank">TopMonks</a> ,
+              <a href="https://www.aikitdigital.com/" target="_blank">
+                AIKIT Digital</a
+              >
+              ,
+              <a href="https://www.byzkids.com/" target="_blank">Byzkids</a> ,
+              and
+              <a
+                href="https://www.facebook.com/refresh.cz/?locale=cs_CZ"
+                target="_blank"
                 >Refresh</a
-              >, or <a href="https://www.byzkids.com/">Byzkids</a>
-              to elevate the online presence of early-stage startups and growing
-              businesses. My expertise lies in crafting beautiful, user-centric
-              websites using HTML, CSS (including SCSS/SASS), JavaScript, and
-              React.js. I'm equally skilled with web creation platforms like
-              <a href="https://wordpress.com/" target="_blank">WordPress</a>,
-              <a href="https://www.wix.com/" target="_blank">Wix</a>, and
-              <a href="https://webflow.com/" target="_blank">Webflow</a>.
+              >
+              . Across these roles, I’ve contributed to website redesigns,
+              optimized user experiences, and helped elevate the online presence
+              of startups and established businesses alike.
+            </p>
+            <p>
+              I’m a self-taught engineer who truly loves this work. Driven by
+              curiosity and creativity, I’m always learning, improving, and
+              challenging myself to be better. I bring a positive,
+              forward-thinking mindset to every project, thriving both when
+              collaborating across departments and when diving deep into
+              independent work. I love to inspire and be inspired, always
+              looking for ways to grow and help others do the same.
             </p>
           </div>
         </div>
@@ -446,7 +296,7 @@
                     fill="#F4F1E6"
                   />
                 </svg>
-                Write me</a
+                Email</a
               >
               <a
                 href="https://www.instagram.com/annakaufman.dev/"
@@ -472,7 +322,33 @@
                     fill="#F4F1E6"
                   />
                 </svg>
-                Check my work on social media</a
+                GitHub</a
+              >
+              <a
+                href="https://www.instagram.com/annakaufman.dev/"
+                target="_blank"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="24" height="24" rx="12" fill="#FF3B00" />
+                  <path
+                    d="M12.0053 8.93208C11.8997 8.93208 11.7954 8.93746 11.6925 8.94799C11.5897 8.95853 11.4883 8.97413 11.3886 8.99462C11.2889 9.01511 11.191 9.04049 11.095 9.07044L10.8134 9.17385L10.5452 9.30333L10.2922 9.4573L10.0558 9.63414L9.83761 9.83231L9.63924 10.0503L9.4622 10.2865L9.30804 10.5393L9.17849 10.8071C9.13955 10.8987 9.10491 10.9926 9.07492 11.0885C9.04494 11.1844 9.01956 11.2823 8.99903 11.3818C8.9785 11.4814 8.9629 11.5827 8.95232 11.6855C8.94175 11.7882 8.93645 11.8925 8.93645 11.9979C8.93645 12.1033 8.94183 12.2076 8.95232 12.3103C8.96276 12.4123 8.97835 12.5136 8.99903 12.614C9.01956 12.7139 9.04494 12.8114 9.07492 12.9073C9.10491 13.0032 9.13951 13.0971 9.17849 13.1887L9.30804 13.4566L9.4622 13.7093L9.63924 13.9455L9.83761 14.1635L10.0558 14.3617L10.2922 14.5385L10.5452 14.6925L10.8134 14.822L11.095 14.9254L11.3886 15.0012C11.489 15.0219 11.5905 15.0374 11.6925 15.0479C11.7964 15.0585 11.9008 15.0638 12.0053 15.0637C12.1108 15.0637 12.2152 15.0584 12.318 15.0479C12.42 15.0374 12.5214 15.0219 12.6219 15.0012L12.9155 14.9254L13.1971 14.822L13.4652 14.6925L13.7183 14.5385L13.9547 14.3617L14.173 14.1635L14.3713 13.9455L14.5484 13.7093L14.7025 13.4566L14.8321 13.1887L14.9356 12.9073C14.9656 12.8114 14.991 12.7136 15.0115 12.614L15.0582 12.3103C15.0688 12.2075 15.0742 12.1033 15.0742 11.9979C15.0742 11.8924 15.0688 11.7882 15.0582 11.6854C15.0478 11.5835 15.0322 11.4821 15.0115 11.3818C14.991 11.2818 14.9656 11.1844 14.9356 11.0885L14.8321 10.8071L14.7025 10.5392L14.5484 10.2864L14.3713 10.0503L14.173 9.83228L13.9547 9.6341L13.7183 9.45726L13.4652 9.30329L13.1971 9.17381L12.9155 9.0704L12.6219 8.99459L12.318 8.94795C12.2141 8.93734 12.1097 8.93203 12.0053 8.93204V8.93208ZM12.0053 9.99028C12.075 9.99028 12.1439 9.99374 12.2117 10.0006L12.4116 10.0308L12.6047 10.08L12.7896 10.1472L12.9654 10.2314L13.1307 10.3315L13.2853 10.4468L13.4278 10.576L13.5571 10.7183L13.6725 10.8727L13.7727 11.0383L13.8569 11.2139C13.8822 11.2741 13.9047 11.3357 13.9242 11.3987C13.9437 11.4617 13.9601 11.5261 13.9734 11.5917C13.9867 11.6573 13.9965 11.724 14.0036 11.7918L14.014 11.9981C14.014 12.0678 14.0105 12.1366 14.0036 12.2044C13.9968 12.2722 13.9867 12.339 13.9734 12.4045C13.9601 12.4701 13.9436 12.5345 13.9242 12.5975L13.8569 12.7823L13.7727 12.9579L13.6725 13.1234L13.5571 13.2779L13.4278 13.4202L13.2853 13.5494L13.1307 13.6647L12.9654 13.7648L12.7896 13.849L12.6047 13.9162L12.4116 13.9654L12.2117 13.9956C12.1431 14.0025 12.0742 14.0059 12.0052 14.0059C11.9363 14.0059 11.8673 14.0025 11.7987 13.9956L11.5988 13.9654C11.5332 13.9521 11.4687 13.9356 11.4057 13.9162L11.2207 13.849L11.0449 13.7648L10.8796 13.6647L10.7251 13.5494L10.5826 13.4202L10.4532 13.2779L10.3379 13.1234L10.2377 12.9579L10.1535 12.7823L10.0862 12.5975L10.037 12.4045L10.0067 12.2044C9.99984 12.1359 9.9964 12.067 9.99642 11.9981C9.9964 11.9292 9.99984 11.8603 10.0067 11.7918C10.0135 11.724 10.0236 11.6572 10.037 11.5917C10.0502 11.5266 10.0666 11.4622 10.0862 11.3987L10.1535 11.214L10.2377 11.0383L10.338 10.8728L10.4533 10.7184L10.5826 10.576L10.7251 10.4468L10.8797 10.3316L11.045 10.2314L11.2208 10.1472C11.2813 10.1218 11.343 10.0994 11.4057 10.0801L11.5989 10.0309C11.6645 10.0176 11.7313 10.0074 11.7988 10.0006C11.8674 9.99375 11.9363 9.99031 12.0053 9.99032L12.0053 9.99028Z"
+                    fill="#F4F1E6"
+                  />
+                  <path
+                    d="M15.1986 8.05994C15.1742 8.05994 15.1498 8.06117 15.1256 8.06363C15.1013 8.06608 15.0772 8.06975 15.0534 8.07462C15.0295 8.07949 15.0059 8.08556 14.9826 8.09281C14.9593 8.10006 14.9364 8.10847 14.914 8.11803C14.8915 8.12759 14.8696 8.13828 14.8482 8.15005C14.8268 8.1618 14.806 8.17462 14.7859 8.18845C14.7658 8.20231 14.7464 8.21717 14.7277 8.23297C14.7091 8.24876 14.6913 8.26548 14.6743 8.28306C14.6573 8.30066 14.6412 8.3191 14.6261 8.33831C14.611 8.35752 14.5968 8.37749 14.5836 8.39813C14.5705 8.41875 14.5583 8.44002 14.5473 8.46187C14.5362 8.48373 14.5263 8.50613 14.5174 8.52899C14.5086 8.55185 14.5009 8.57513 14.4944 8.59877C14.4879 8.62239 14.4825 8.64634 14.4784 8.6705C14.4743 8.69466 14.4713 8.71901 14.4696 8.74347C14.4684 8.76079 14.4677 8.77815 14.4677 8.79552C14.4677 8.82005 14.469 8.84457 14.4714 8.86899C14.4738 8.89339 14.4775 8.91765 14.4823 8.94168C14.4872 8.96572 14.4932 8.98949 14.5004 9.01292C14.5076 9.03635 14.516 9.05941 14.5254 9.082C14.5349 9.1046 14.5456 9.12671 14.5572 9.14824C14.5689 9.16977 14.5817 9.1907 14.5954 9.21094C14.6092 9.23118 14.6239 9.25071 14.6396 9.26946C14.6553 9.28822 14.6719 9.30618 14.6894 9.32328C14.7069 9.34036 14.7252 9.35655 14.7443 9.37179C14.7634 9.38704 14.7832 9.40132 14.8037 9.41458C14.8243 9.42784 14.8454 9.44005 14.8671 9.45118C14.8888 9.46231 14.9111 9.47235 14.9338 9.48124C14.9565 9.49013 14.9796 9.49786 15.0031 9.50442C15.0266 9.51097 15.0504 9.51634 15.0744 9.52049C15.0984 9.52467 15.1226 9.52763 15.1469 9.52937C15.1641 9.5306 15.1813 9.53122 15.1986 9.53122C15.223 9.53123 15.2473 9.53001 15.2716 9.52757C15.2958 9.52512 15.3199 9.52145 15.3438 9.51657C15.3677 9.5117 15.3913 9.50563 15.4146 9.49839C15.4379 9.49114 15.4608 9.48272 15.4832 9.47317C15.5056 9.46362 15.5276 9.45294 15.549 9.44118C15.5704 9.42942 15.5911 9.41659 15.6113 9.40274C15.6314 9.3889 15.6508 9.37405 15.6694 9.35826C15.6881 9.34246 15.7059 9.32573 15.7229 9.30813C15.7398 9.29054 15.7559 9.2721 15.7711 9.25289C15.7862 9.23367 15.8004 9.21371 15.8135 9.19307C15.8267 9.17243 15.8388 9.15114 15.8499 9.12929C15.8609 9.10743 15.8709 9.08503 15.8797 9.06217C15.8886 9.03931 15.8963 9.01602 15.9028 8.99239C15.9093 8.96876 15.9146 8.94482 15.9188 8.92066C15.9229 8.8965 15.9258 8.87214 15.9276 8.84769C15.9288 8.83036 15.9294 8.813 15.9294 8.79564C15.9294 8.77111 15.9282 8.74661 15.9258 8.72221C15.9233 8.69781 15.9197 8.67354 15.9148 8.64951C15.91 8.62548 15.904 8.6017 15.8968 8.57827C15.8896 8.55484 15.8812 8.53178 15.8717 8.50919C15.8622 8.48659 15.8516 8.46448 15.8399 8.44295C15.8282 8.42142 15.8155 8.4005 15.8017 8.38025C15.788 8.36 15.7732 8.34046 15.7575 8.3217C15.7418 8.30294 15.7252 8.28497 15.7077 8.26788C15.6903 8.2508 15.6719 8.2346 15.6528 8.21936C15.6338 8.20412 15.6139 8.18986 15.5934 8.17661C15.5729 8.16336 15.5517 8.15114 15.53 8.14001C15.5083 8.12888 15.4861 8.11885 15.4634 8.10995C15.4407 8.10107 15.4175 8.09333 15.394 8.08677C15.3706 8.08021 15.3468 8.07483 15.3228 8.07066C15.2988 8.0665 15.2746 8.06355 15.2503 8.06182C15.2331 8.06059 15.2158 8.05998 15.1986 8.05998V8.05994Z"
+                    fill="#F4F1E6"
+                  />
+                  <path
+                    d="M11.4233 6.00011C11.0895 5.99957 10.7917 6.00096 10.5241 6.00472L9.80674 6.02395C9.59423 6.03317 9.40647 6.04521 9.23793 6.06078C9.15366 6.06854 9.07416 6.07723 8.99881 6.0868C8.92711 6.09584 8.8556 6.10636 8.78433 6.11836C8.71648 6.1299 8.65208 6.14235 8.59034 6.15588C8.5286 6.16942 8.46963 6.18403 8.41273 6.19971C8.35711 6.21505 8.30192 6.23192 8.24723 6.2503C8.19364 6.26837 8.14136 6.28752 8.08973 6.30797C7.98647 6.34887 7.88575 6.39477 7.78202 6.44621C7.70221 6.48581 7.62848 6.52591 7.55843 6.56835C7.48839 6.61079 7.42204 6.65562 7.35707 6.70444C7.29016 6.75497 7.22567 6.80862 7.16381 6.86521C7.09915 6.92411 7.0331 6.98889 6.96448 7.06128C6.87825 7.15173 6.80332 7.23608 6.73681 7.31885C6.70356 7.36021 6.67242 7.40112 6.64309 7.44225C6.61408 7.48279 6.58635 7.52423 6.55993 7.5665C6.53379 7.60841 6.50903 7.65108 6.48535 7.69498C6.4613 7.73964 6.43857 7.785 6.41719 7.831C6.37344 7.92495 6.33262 8.02614 6.29187 8.13909C6.26163 8.22259 6.23456 8.3072 6.21071 8.39274C6.18638 8.48016 6.16473 8.57162 6.14543 8.67053C6.12613 8.76945 6.1093 8.87582 6.09449 8.99346C6.07855 9.12241 6.0658 9.25174 6.05628 9.38132C6.04552 9.52379 6.0366 9.68057 6.02929 9.85506L6.01199 10.4353L6.00269 11.1425L6 11.9974L6.00788 13.2405L6.03248 14.1824L6.05144 14.5503L6.07512 14.8552C6.08271 14.9374 6.09221 15.0193 6.10361 15.1011C6.11399 15.1736 6.12513 15.2372 6.13713 15.2921C6.16147 15.4039 6.19025 15.5147 6.2234 15.6241C6.25514 15.7289 6.29144 15.8323 6.33219 15.934C6.37225 16.0336 6.41608 16.1296 6.46375 16.222C6.51142 16.3144 6.56293 16.4032 6.61829 16.4885C6.67365 16.5738 6.73285 16.6557 6.79606 16.734C6.85919 16.8123 6.92633 16.8873 6.99723 16.9586C7.06824 17.0301 7.14313 17.0982 7.22205 17.1628C7.30191 17.2282 7.38492 17.2897 7.47078 17.347C7.55048 17.4003 7.62933 17.4491 7.70875 17.4938C7.78817 17.5386 7.86829 17.5793 7.95064 17.6162C8.03299 17.6532 8.11741 17.6864 8.2056 17.7163C8.29379 17.7462 8.38567 17.7728 8.48278 17.7964C8.57989 17.82 8.68268 17.8408 8.79148 17.8588C8.90028 17.8769 9.01657 17.8924 9.14082 17.9057C9.26507 17.9191 9.39762 17.9301 9.54006 17.9393C9.68249 17.9486 9.83473 17.9559 9.99831 17.9619C10.251 17.971 10.6335 17.9764 11.0746 17.9784L12.5026 17.9755L13.8548 17.9566L14.369 17.9421L14.7039 17.9249C14.7758 17.919 14.8462 17.9121 14.9141 17.904C14.982 17.8959 15.0489 17.8866 15.1141 17.8761C15.1793 17.8656 15.2431 17.8538 15.3057 17.8407C15.3676 17.8278 15.4292 17.8134 15.4904 17.7976C15.551 17.7822 15.6107 17.7647 15.6698 17.7461C15.729 17.7275 15.7875 17.7075 15.8456 17.6859C15.9041 17.6643 15.9621 17.6412 16.0195 17.6167C16.0773 17.5921 16.135 17.5658 16.1929 17.5379C16.2818 17.4951 16.3534 17.4594 16.4162 17.4245C16.4754 17.3921 16.5323 17.3558 16.5867 17.3159C16.6404 17.2764 16.6937 17.2314 16.7552 17.1748C16.8167 17.1181 16.8864 17.0498 16.9727 16.9635C17.0486 16.8877 17.1126 16.8218 17.1677 16.7618C17.2229 16.7019 17.2694 16.648 17.3101 16.596C17.349 16.5467 17.3852 16.4953 17.4185 16.4421C17.4511 16.3902 17.4811 16.3363 17.5116 16.2766C17.5576 16.1866 17.5985 16.1033 17.6352 16.0229C17.6707 15.9454 17.7032 15.8666 17.7326 15.7866C17.7615 15.7072 17.7865 15.6264 17.8076 15.5446C17.8293 15.4604 17.848 15.3715 17.8641 15.274C17.8802 15.1765 17.8939 15.0704 17.9057 14.9519C17.9176 14.8334 17.9276 14.7025 17.9365 14.5554L17.9599 14.0615L17.9801 13.4473L17.9945 12.763L18 12.0474L17.9872 10.6421L17.97 10.0127L17.9465 9.47224L17.9173 9.0509C17.9067 8.93364 17.8952 8.8413 17.8831 8.77887C17.8697 8.70988 17.8546 8.64122 17.838 8.57292C17.8219 8.50647 17.8041 8.44042 17.7848 8.37482C17.7659 8.31092 17.7455 8.2475 17.7234 8.18464C17.7015 8.12255 17.6784 8.06178 17.6542 8.0023C17.6299 7.94283 17.6037 7.88474 17.5764 7.82788C17.5491 7.77102 17.5205 7.71555 17.4905 7.66134C17.4605 7.60714 17.4292 7.55428 17.3965 7.50273C17.3638 7.45117 17.3297 7.40093 17.2942 7.35203C17.2589 7.30328 17.2221 7.25565 17.1839 7.20921C17.1458 7.16302 17.1063 7.11804 17.0654 7.07435C17.0245 7.03071 16.9823 6.98837 16.9388 6.94741C16.8952 6.90642 16.8504 6.86675 16.8041 6.82838C16.7576 6.78989 16.71 6.75285 16.6612 6.71732C16.612 6.68142 16.5616 6.64704 16.5102 6.61421C16.4582 6.58092 16.4051 6.54918 16.3511 6.51903C16.2962 6.48837 16.2405 6.45929 16.1839 6.43183C16.09 6.3862 16.0032 6.34572 15.918 6.30981C15.8342 6.27418 15.7488 6.24253 15.662 6.21497C15.5748 6.18749 15.4839 6.16392 15.384 6.14358C15.284 6.12325 15.175 6.10629 15.0517 6.09188C14.9283 6.07746 14.7906 6.06581 14.633 6.05612C14.4755 6.04644 14.2983 6.03882 14.096 6.03267L13.4083 6.0173L12.5381 6.00703L11.4237 6.00019L11.4233 6.00011ZM12.0021 7.05739L13.6091 7.06654L14.2154 7.07823C14.3824 7.08292 14.5098 7.08842 14.5845 7.09476C14.6817 7.10295 14.7744 7.11321 14.863 7.12552C14.948 7.13726 15.0327 7.15186 15.1167 7.1693C15.1974 7.18622 15.2745 7.20544 15.3481 7.22712C15.4218 7.2488 15.4922 7.2731 15.5598 7.29997C15.6273 7.32684 15.6919 7.35641 15.7541 7.38878C15.8157 7.4209 15.8757 7.45626 15.9336 7.49469C15.9913 7.53294 16.0469 7.57415 16.1008 7.61856C16.1548 7.66296 16.2071 7.71055 16.2582 7.76145C16.3122 7.81516 16.3619 7.86986 16.4078 7.9263C16.4535 7.98238 16.4957 8.04117 16.5344 8.10233C16.5734 8.16437 16.6086 8.22876 16.6398 8.29513C16.6716 8.36279 16.7002 8.4343 16.7259 8.5103C16.7516 8.5863 16.7745 8.66707 16.7947 8.75338C16.8159 8.84488 16.8337 8.93715 16.848 9.02998C16.8634 9.1284 16.8765 9.23335 16.8877 9.34572C16.8988 9.45809 16.908 9.57792 16.9157 9.70613C16.9217 9.80897 16.927 9.94468 16.9315 10.1049L16.9428 10.6514L16.9514 11.99L16.9416 13.3274L16.9298 13.8723L16.9137 14.2686C16.9024 14.4542 16.8906 14.6102 16.8764 14.746C16.8693 14.8139 16.8616 14.8767 16.8531 14.9356C16.8451 14.9913 16.8356 15.0467 16.8247 15.1019C16.8147 15.1522 16.8031 15.2022 16.7899 15.2518C16.7773 15.2992 16.763 15.3461 16.7473 15.3924C16.7314 15.439 16.7141 15.4851 16.6954 15.5307C16.6757 15.5788 16.6548 15.6264 16.6329 15.6736C16.6134 15.7157 16.593 15.7566 16.5713 15.7965C16.5498 15.8359 16.5271 15.8747 16.503 15.9126C16.4792 15.9501 16.4542 15.9866 16.428 16.0219C16.402 16.0572 16.3748 16.0914 16.3463 16.1247C16.3179 16.1578 16.2883 16.1898 16.2576 16.2208C16.2269 16.2517 16.1949 16.2816 16.1619 16.3104C16.1288 16.3393 16.0945 16.3669 16.0591 16.3936C16.0236 16.4203 15.9869 16.4459 15.9489 16.4704C15.911 16.495 15.8718 16.5185 15.8314 16.5409C15.791 16.5634 15.7493 16.5848 15.7065 16.6053C15.6629 16.626 15.6187 16.6454 15.5739 16.6635C15.5276 16.6821 15.4808 16.6995 15.4336 16.7156C15.3375 16.7483 15.2361 16.7771 15.1294 16.8019C15.0181 16.8275 14.9059 16.8486 14.7929 16.8648C14.7495 16.8712 14.6496 16.8771 14.5066 16.8827L13.9616 16.8978L12.4166 16.9179L10.7994 16.9204L10.1643 16.9137L9.75192 16.9008L9.44783 16.8794C9.35341 16.8715 9.26561 16.8626 9.18334 16.8526C9.10107 16.8426 9.02445 16.8314 8.95237 16.8188C8.88406 16.807 8.81617 16.7929 8.74881 16.7765C8.68739 16.7615 8.6266 16.7441 8.56658 16.7243C8.50873 16.7051 8.45341 16.6839 8.39958 16.6607C8.34576 16.6374 8.29348 16.6119 8.2417 16.5841C8.18991 16.5562 8.13867 16.526 8.08684 16.4931C8.04775 16.4682 8.00996 16.4431 7.97359 16.4165C7.93722 16.3898 7.90208 16.3633 7.86825 16.3354C7.83442 16.3076 7.80194 16.2789 7.77061 16.2494C7.73948 16.22 7.70943 16.1895 7.68049 16.158C7.65166 16.1265 7.6241 16.0941 7.59765 16.0606C7.5711 16.027 7.5458 15.9923 7.5218 15.9568C7.49744 15.9208 7.4744 15.8838 7.45271 15.8461C7.4308 15.808 7.40996 15.7687 7.39017 15.7281C7.37004 15.6867 7.35125 15.6447 7.33385 15.6021C7.31616 15.5587 7.2994 15.514 7.28364 15.4678C7.25211 15.3753 7.22443 15.2769 7.20037 15.172C7.1763 15.067 7.15577 14.9555 7.1384 14.8367C7.12102 14.7179 7.10703 14.592 7.09588 14.4581C7.08765 14.3595 7.08112 14.2059 7.07612 14.0122L7.06566 13.3231L7.06951 11.5664L7.09976 9.88778L7.12283 9.29636L7.1359 9.10087C7.14044 9.04867 7.14513 9.00999 7.14993 8.98677C7.16577 8.91038 7.18172 8.8393 7.19822 8.77275C7.21362 8.70998 7.23076 8.64763 7.24962 8.5858C7.26753 8.52744 7.28641 8.47278 7.30659 8.42099C7.32605 8.37083 7.34774 8.32156 7.3716 8.27333C7.39489 8.22643 7.41992 8.18153 7.4471 8.13782C7.47428 8.09411 7.50361 8.0517 7.5356 8.00953C7.56758 7.96736 7.60203 7.92572 7.63951 7.88351C7.677 7.8413 7.71748 7.79867 7.76138 7.75472C7.81255 7.70327 7.86582 7.65395 7.92107 7.60691C7.97325 7.56252 8.02765 7.52083 8.08408 7.482C8.13955 7.44356 8.19645 7.40935 8.25569 7.3779C8.31493 7.34645 8.37652 7.31804 8.4413 7.29248C8.50607 7.26691 8.57412 7.24404 8.6462 7.22328C8.72193 7.20204 8.7985 7.18391 8.87571 7.16896C8.9569 7.15304 9.04313 7.13916 9.13521 7.12705C9.22728 7.11494 9.32523 7.10449 9.42996 7.09541C9.503 7.08911 9.62886 7.0835 9.7946 7.07877L10.3978 7.06685L12.0023 7.05705L12.0021 7.05739Z"
+                    fill="#F4F1E6"
+                  />
+                </svg>
+                LinkedIn</a
               >
             </div>
           </div>
@@ -485,7 +361,7 @@
     <footer id="footer" class="footer mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <span>© Anna Cihlova 2024</span>
+          <span>© Anna Cihlova 2025</span>
         </div>
       </div>
     </footer>
