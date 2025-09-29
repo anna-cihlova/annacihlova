@@ -286,6 +286,7 @@ ul {
 }
 @media (max-width: 839px) {
   .intro {
+    padding-top: 4rem;
     padding-bottom: 3rem;
   }
   .intro .intro-header {
