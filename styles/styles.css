@@ -4,11 +4,6 @@
   overscroll-behavior: none;
 }
 
-[data-aos] {
-  will-change: transform, opacity;
-  overflow-x: clip;
-}
-
 a,
 button,
 input {
@@ -138,7 +133,7 @@ ul {
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -171,6 +166,10 @@ ul {
 }
 .navbar .nav-content .nav-menu li {
   list-style: none;
+}
+.navbar .nav-content .nav-menu .nav-item--social {
+  display: flex;
+  gap: 14px;
 }
 .navbar .nav-content .hamburger {
   display: none;
@@ -235,8 +234,9 @@ ul {
 
 .intro {
   position: relative;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 74px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .intro .intro-header {
   display: flex;
@@ -303,7 +303,7 @@ ul {
   height: 48px;
   line-height: 48px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   cursor: pointer;
   position: relative;
 }
@@ -335,7 +335,6 @@ ul {
   color: rgb(64, 89, 121);
   background-color: #f4f1e6;
   align-items: start;
-  overflow-x: hidden !important;
 }
 @media screen and (min-width: 1024px) {
   .projects .projects-left {
@@ -347,7 +346,6 @@ ul {
   .projects .projects-right {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
   }
 }
 .projects .projects-container .project {
@@ -356,6 +354,7 @@ ul {
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 .projects .projects-container .project h3,
@@ -402,7 +401,6 @@ ul {
   .projects .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
   }
   .projects .projects-container .project {
     display: flex;

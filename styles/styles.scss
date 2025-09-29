@@ -6,11 +6,6 @@
   overscroll-behavior: none;
 }
 
-[data-aos] {
-  will-change: transform, opacity;
-  overflow-x: clip; // modern browsers support this
-}
-
 a,
 button,
 input {
@@ -147,7 +142,7 @@ ul {
 
 // Navbar
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
@@ -178,6 +173,10 @@ ul {
 
       li {
         list-style: none;
+      }
+      .nav-item--social {
+        display: flex;
+        gap: 14px;
       }
     }
 
@@ -254,8 +253,9 @@ ul {
 
 .intro {
   position: relative;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 74px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   .intro-header {
     display: flex;
@@ -320,7 +320,7 @@ ul {
   height: 48px;
   line-height: 48px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   cursor: pointer;
   position: relative;
 
@@ -356,7 +356,6 @@ ul {
   color: color(tertiary);
   background-color: color(primary);
   align-items: start;
-  overflow-x: hidden !important;
 
   @media screen and (min-width: 1024px) {
     .projects-left {
@@ -368,7 +367,6 @@ ul {
     .projects-right {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
     }
   }
 
@@ -379,6 +377,7 @@ ul {
       align-items: flex-start;
       gap: 20px;
       padding: 20px;
+      margin-bottom: 20px;
       border: 1px solid transparent;
       h3,
       p {
@@ -424,7 +423,6 @@ ul {
     @media (max-width: 889px) {
       display: flex;
       flex-direction: column;
-      gap: 30px;
       .project {
         display: flex;
         flex-direction: column;
