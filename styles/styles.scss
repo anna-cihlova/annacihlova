@@ -169,7 +169,6 @@ ul {
     justify-content: space-between;
     align-items: center;
 
-    /* Desktop Menu */
     .nav-menu {
       display: flex;
       align-items: center;
@@ -190,20 +189,19 @@ ul {
 
       .bar {
         background-color: color(secondary);
-        width: 26px;
+        width: 28px;
         height: 3px;
-        border-radius: 4px;
         margin: 2px 0;
-        border-radius: 4px;
+        border-radius: 2px;
         transition: all 0.3s ease-in-out;
       }
 
       &.active {
-        .bar:nth-child(2) {
-          opacity: 0;
-        }
         .bar:nth-child(1) {
           transform: translateY(7px) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
         }
         .bar:nth-child(3) {
           transform: translateY(-7px) rotate(-45deg);
@@ -213,19 +211,17 @@ ul {
 
     /* Mobile Styles */
     @media screen and (max-width: 839px) {
-      position: relative;
       .hamburger {
         display: flex;
       }
 
       .nav-menu {
         position: fixed;
-        top: -12px;
-        right: -1000%;
+        top: 0;
+        right: -100%;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-top: 15%;
         gap: 2rem;
         width: 70%;
         height: 100vh;
@@ -234,11 +230,7 @@ ul {
         border-left: 0.5px solid color(secondary);
 
         &.active {
-          right: -20px;
-        }
-
-        li {
-          margin: 0;
+          right: 0;
         }
 
         a {
@@ -362,6 +354,7 @@ ul {
   color: color(tertiary);
   background-color: color(primary);
   align-items: start;
+  overflow-x: hidden !important;
 
   @media screen and (min-width: 1024px) {
     .projects-left {
