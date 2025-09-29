@@ -205,15 +205,15 @@ ul {
     top: 0;
     right: -100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding-top: 30%;
     gap: 2rem;
     width: 70%;
     height: 100vh;
     background: #f4f1e6;
     transition: right 0.3s ease-in-out;
     border-left: 0.5px solid #ff3b00;
-    z-index: 1200;
   }
   .navbar .nav-content .nav-menu.active {
     right: 0;

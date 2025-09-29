@@ -222,16 +222,15 @@ ul {
         top: 0;
         right: -100%;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+        padding-top: 30%;
         gap: 2rem;
         width: 70%;
         height: 100vh;
         background: color(primary);
         transition: right 0.3s ease-in-out;
         border-left: 0.5px solid color(secondary);
-        z-index: 1200;
-
         &.active {
           right: 0;
         }

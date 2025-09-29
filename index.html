@@ -346,5 +346,39 @@
         once: false, // false = re-animate on scroll up
       });
     </script>
+    <script>
+      // Ensure nav animations (AOS) only apply on larger screens to avoid
+      // creating a transformed ancestor that breaks fixed-position children.
+      (function () {
+        const nav = document.querySelector('.nav-content');
+        const applyAos = () => {
+          if (!nav) return;
+          if (window.matchMedia('(min-width: 840px)').matches) {
+            nav.setAttribute('data-aos', 'fade-down');
+            nav.setAttribute('data-aos-once', 'true');
+          } else {
+            nav.removeAttribute('data-aos');
+            nav.removeAttribute('data-aos-once');
+          }
+        };
+
+        // Apply on load
+        applyAos();
+
+        // Reapply on resize (debounced)
+        let t = null;
+        window.addEventListener('resize', () => {
+          clearTimeout(t);
+          t = setTimeout(applyAos, 150);
+        });
+
+        // Re-init AOS after toggling attributes
+        setTimeout(() => {
+          if (window.AOS && typeof window.AOS.refresh === 'function') {
+            window.AOS.refresh();
+          }
+        }, 300);
+      })();
+    </script>
   </body>
 </html>
