@@ -218,8 +218,12 @@ ul {
     right: 0;
   }
   .navbar .nav-content .nav-menu a {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
+  }
+  .navbar .nav-content .nav-menu a img {
+    width: 44px;
+    height: 44px;
   }
 }
 
