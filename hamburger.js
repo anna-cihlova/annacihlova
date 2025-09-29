@@ -1,15 +1,14 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navItem = document.querySelectorAll(".nav-item");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener("click", function () {
+hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
-navItem.forEach((item) =>
-  item.addEventListener("click", function () {
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-  })
-);
+  });
+});
