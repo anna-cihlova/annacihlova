@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   projects.forEach((project) => {
     const projectHTML = `
         <${
-          !project.href ? "div" : `a src="${project.href}"`
-        } class="project mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          !project.href ? "div" : `a href="${project.href}" target="_blank"`
+        } class="project mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+          data-aos="fade-left"
+          data-aos-offset="120"
+          data-aos-duration="1200"
+        >
          <picture class="project-poster mdc-layout-grid__cell">
           ${
             project.video
