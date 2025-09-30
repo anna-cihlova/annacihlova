@@ -189,6 +189,8 @@ ul {
   justify-content: center;
   cursor: pointer;
   z-index: 1100;
+  border: none;
+  background-color: transparent;
 }
 .navbar .nav-content .hamburger .bar {
   background-color: #ff3b00;

@@ -200,6 +200,8 @@ ul {
       justify-content: center;
       cursor: pointer;
       z-index: 1100;
+      border: none;
+      background-color: transparent;
 
       .bar {
         background-color: color(secondary);
