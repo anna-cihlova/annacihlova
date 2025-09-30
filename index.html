@@ -173,11 +173,17 @@
             </ul>
           </div>
           <img
-            src="assets/intro.webp"
+            src="assets/intro-800.webp"
+            srcset="
+              assets/intro-400.webp 400w,
+              assets/intro-600.webp 600w,
+              assets/intro-800.webp 800w
+            "
+            sizes="(max-width: 540px) 100vw, (max-width: 1023px) 50vw, 800px"
             class="intro-img"
             width="1054"
             height="1582"
-            alt="Woman sitting on a chair"
+            alt="Anna sitting on a chair, smiling."
             fetchpriority="high"
             decoding="async"
             data-aos="fade-left"
