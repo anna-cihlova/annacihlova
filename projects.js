@@ -7,6 +7,7 @@ export const projects = [
     image: "talentcom.webp",
     alt: "Landing page for Talent.com",
     href: "https://www.talent.com/salary",
+    in_production: true,
   },
   {
     title: "Talent Right Partners",
@@ -16,6 +17,7 @@ export const projects = [
     image: "talentrightpartners.webp",
     alt: "Landing page for Talent Right Partners",
     href: "https://www.talentrightpartners.com/",
+    in_production: true,
   },
   {
     title: "Blockchain",
@@ -25,6 +27,7 @@ export const projects = [
     image: "blockchain.webp",
     alt: "Landing page for TopMonks Blockchain",
     href: "https://blockchain.topmonks.com/",
+    in_production: true,
   },
   {
     title: "Coding for Kids",
@@ -34,6 +37,7 @@ export const projects = [
     image: "for-kids.webp",
     alt: "Landing page for Coding for Kids",
     href: "https://prodeti.topmonks.cz/",
+    in_production: true,
   },
   {
     title: "TopMonks",
@@ -42,6 +46,7 @@ export const projects = [
       "Developed the company’s bilingual landing page (Czech & English) with a responsive, mobile-friendly design. Implemented features like a sticky navigation bar, animated buttons, and smooth background transitions using HTML, CSS/SCSS, and JavaScript.",
     image: "topmonks.webp",
     alt: "Landing page for TopMonks",
+    in_production: false,
   },
   {
     title: "PostCube",
@@ -50,6 +55,7 @@ export const projects = [
       "Built a landing page for PostCube, a private mailbox service. Added an animated navigation bar, integrated a video section, and designed a user-friendly contact form using HTML, CSS/SCSS, and JavaScript.",
     video: "postcube.mp4",
     alt: "Landing page for PostCube",
+    in_production: false,
   },
   {
     title: "Wedding Website",
@@ -58,5 +64,6 @@ export const projects = [
       "Designed and built a personalized wedding site on Wix, reflecting the couple and venue. Included features like an RSVP form, integrated gift registry, and a photo slideshow. Created the layout and visuals in Figma.",
     video: "wedding-website.mp4",
     alt: "Landing page for a wedding",
+    in_production: false,
   },
 ];

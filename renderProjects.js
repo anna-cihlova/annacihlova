@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <h3>${project?.title}</h3>
+             ${
+               !project.in_production
+                 ? `<h4>[⊘ No longer in production]</h4>`
+                 : ""
+             }
             <p>${project?.description}</p>
             <ul class="project-skills">
             ${project?.tools

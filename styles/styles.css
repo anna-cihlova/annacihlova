@@ -66,6 +66,12 @@ h3 {
   margin-bottom: 0;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
 p {
   font-size: 1.125rem;
   line-height: 1.5;
@@ -379,12 +385,17 @@ ul {
   border: 1px solid transparent;
 }
 .projects .projects-container .project h3,
+.projects .projects-container .project h4,
 .projects .projects-container .project p {
   color: rgb(64, 89, 121);
 }
 .projects .projects-container .project h3 {
   margin-top: 0;
   text-transform: uppercase;
+}
+.projects .projects-container .project h4 {
+  opacity: 0.65;
+  margin-top: 4px;
 }
 .projects .projects-container .project p {
   font-size: 1rem;
@@ -430,6 +441,7 @@ ul {
     transform: translateY(-4px);
   }
   .projects .projects-container .project:hover h3,
+  .projects .projects-container .project:hover h4,
   .projects .projects-container .project:hover p {
     color: #ff3b00;
   }
