@@ -22,8 +22,9 @@ input {
   border: 0;
 }
 
-html {
-  overflow-x: hidden;
+html,
+body {
+  overflow-x: clip;
 }
 
 body {
@@ -40,7 +41,6 @@ body {
   margin: 0 auto;
   overflow-wrap: break-word;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .mdc-layout-grid__inner {
@@ -407,8 +407,13 @@ ul {
 .projects .projects-container .project .project-poster img,
 .projects .projects-container .project .project-poster video {
   border-radius: 4px;
-  filter: grayscale(1);
   margin-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .projects .projects-container .project .project-poster img,
+  .projects .projects-container .project .project-poster video {
+    filter: grayscale(1);
+  }
 }
 @media (max-width: 889px) {
   .projects .projects-container .project .project-poster img,
