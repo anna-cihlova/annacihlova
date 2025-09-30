@@ -10,16 +10,6 @@ export const projects = [
     in_production: true,
   },
   {
-    title: "Talent Right Partners",
-    tools: ["Wix"],
-    description:
-      "Designed and developed a modern multi-page website on Wix for Talent Right Partners (Career Coaching, Executive Search, and HR Consulting). Built in accessibility and SEO best practices, and included a user sign-up form for lead generation. Also created branded presentation templates and Facebook banners to ensure a cohesive online presence.",
-    image: "talentrightpartners.webp",
-    alt: "Landing page for Talent Right Partners",
-    href: "https://www.talentrightpartners.com/",
-    in_production: true,
-  },
-  {
     title: "Blockchain",
     tools: ["JavaScript", "HTML", "CSS/SCSS"],
     description:
@@ -27,6 +17,16 @@ export const projects = [
     image: "blockchain.webp",
     alt: "Landing page for TopMonks Blockchain",
     href: "https://blockchain.topmonks.com/",
+    in_production: true,
+  },
+  {
+    title: "Talent Right Partners",
+    tools: ["Wix"],
+    description:
+      "Designed and developed a modern multi-page website on Wix for Talent Right Partners (Career Coaching, Executive Search, and HR Consulting). Built in accessibility and SEO best practices, and included a user sign-up form for lead generation. Also created branded presentation templates and Facebook banners to ensure a cohesive online presence.",
+    image: "talentrightpartners.webp",
+    alt: "Landing page for Talent Right Partners",
+    href: "https://www.talentrightpartners.com/",
     in_production: true,
   },
   {
