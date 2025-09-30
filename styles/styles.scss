@@ -421,7 +421,8 @@ ul {
 
       h4 {
         opacity: 0.65;
-        margin-top: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
       }
 
       p {
@@ -465,16 +466,14 @@ ul {
           transform: translateY(-4px);
           h3,
           h4,
-          p {
+          p,
+          li.skill-box {
             color: color(secondary);
+            border-color: color(secondary);
           }
           img,
           video {
             filter: grayscale(0);
-          }
-          li.skill-box {
-            color: color(secondary);
-            border-color: color(secondary);
           }
         }
       }
@@ -487,6 +486,7 @@ ul {
         flex-direction: column;
         gap: 10px;
         padding: 0;
+        margin-bottom: 32px;
         h3 {
           font-size: 22px;
         }

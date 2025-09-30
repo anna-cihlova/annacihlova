@@ -395,7 +395,8 @@ ul {
 }
 .projects .projects-container .project h4 {
   opacity: 0.65;
-  margin-top: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .projects .projects-container .project p {
   font-size: 1rem;
@@ -442,16 +443,14 @@ ul {
   }
   .projects .projects-container .project:hover h3,
   .projects .projects-container .project:hover h4,
-  .projects .projects-container .project:hover p {
+  .projects .projects-container .project:hover p,
+  .projects .projects-container .project:hover li.skill-box {
     color: #ff3b00;
+    border-color: #ff3b00;
   }
   .projects .projects-container .project:hover img,
   .projects .projects-container .project:hover video {
     filter: grayscale(0);
-  }
-  .projects .projects-container .project:hover li.skill-box {
-    color: #ff3b00;
-    border-color: #ff3b00;
   }
 }
 @media (max-width: 889px) {
@@ -464,6 +463,7 @@ ul {
     flex-direction: column;
     gap: 10px;
     padding: 0;
+    margin-bottom: 32px;
   }
   .projects .projects-container .project h3 {
     font-size: 22px;
