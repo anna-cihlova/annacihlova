@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     src="assets/case-study/${project.image}"
                     alt="${project.alt || "Project preview"}"
                     width="180"
+                    decoding="async"
+                    loading="lazy"
                     sizes="(max-width: 200px) 100vw, 180px"
                   />
                 `
@@ -35,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     src="assets/case-study/placeholder.webp"
                     alt="${project.alt || "Placeholder preview"}"
                     width="180"
+                    decoding="async"
+                    loading="lazy"
                     sizes="(max-width: 200px) 100vw, 180px"
                   />
                 `
