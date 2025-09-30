@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `
               : `
                   <img
-                    src="assets/case-study/placeholder.png"
+                    src="assets/case-study/placeholder.webp"
                     alt="${project.alt || "Placeholder preview"}"
                     width="180"
                     sizes="(max-width: 200px) 100vw, 180px"

@@ -4,7 +4,7 @@ export const projects = [
     year: "2020",
     description:
       "Developed the company’s bilingual landing page (Czech & English) with a responsive, mobile-friendly design. Implemented features like a sticky navigation bar, animated buttons, and smooth background transitions using HTML, CSS/SCSS, and JavaScript.",
-    image: "topmonks.png",
+    image: "topmonks.webp",
     alt: "Landing page for TopMonks",
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     year: "2022",
     description:
       "Coded a website for TopMonks Blockchain, a development studio focused on blockchain technologies. Built with HTML, CSS/SCSS, and JavaScript, featuring a responsive layout and modern UI elements.",
-    image: "blockchain.png",
+    image: "blockchain.webp",
     alt: "Landing page for TopMonks Blockchain",
     href: "https://blockchain.topmonks.com/",
   },
@@ -37,7 +37,7 @@ export const projects = [
     year: "2022",
     description:
       "Created an interactive website to spark children’s interest in programming, technology, and robotics. The site was playful, colorful, and engaging, offering classes for kids of all ages. Built with HTML, CSS/SCSS, and JavaScript.",
-    image: "for-kids.png",
+    image: "for-kids.webp",
     alt: "Landing page for Coding for Kids",
     href: "https://prodeti.topmonks.cz/",
   },
