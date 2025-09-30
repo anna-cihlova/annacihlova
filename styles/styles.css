@@ -248,6 +248,7 @@ ul {
   width: -moz-fit-content;
   width: fit-content;
   padding: 6px 18px;
+  white-space: nowrap;
 }
 
 .intro {
@@ -374,6 +375,7 @@ ul {
   gap: 20px;
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 12px;
   border: 1px solid transparent;
 }
 .projects .projects-container .project h3,
@@ -389,8 +391,23 @@ ul {
   margin-top: 4px;
   margin-bottom: 0;
 }
+.projects .projects-container .project .project-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+.projects .projects-container .project .project-skills li.skill-box {
+  font-size: 0.938rem;
+  color: rgb(64, 89, 121);
+  border-color: rgb(64, 89, 121);
+}
 .projects .projects-container .project .project-poster img,
 .projects .projects-container .project .project-poster video {
+  border-radius: 4px;
+  filter: grayscale(1);
   margin-top: 5px;
 }
 @media (max-width: 889px) {
@@ -413,7 +430,11 @@ ul {
   }
   .projects .projects-container .project:hover img,
   .projects .projects-container .project:hover video {
-    filter: grayscale(1);
+    filter: grayscale(0);
+  }
+  .projects .projects-container .project:hover li.skill-box {
+    color: #ff3b00;
+    border-color: #ff3b00;
   }
 }
 @media (max-width: 889px) {

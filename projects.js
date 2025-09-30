@@ -1,31 +1,25 @@
 export const projects = [
   {
-    title: "TopMonks",
-    year: "2020",
+    title: "Talent.com",
+    tools: ["JavaScript", "React.js", "TypeScript", "Next.js"],
     description:
-      "Developed the company’s bilingual landing page (Czech & English) with a responsive, mobile-friendly design. Implemented features like a sticky navigation bar, animated buttons, and smooth background transitions using HTML, CSS/SCSS, and JavaScript.",
-    image: "topmonks.webp",
-    alt: "Landing page for TopMonks",
+      "Built company subpages with reusable JavaScript, React, and TypeScript components, migrating designs into a Next.js application. Integrated API data for dynamic job search pages, improving navigation and engagement. Applied SEO best practices and led A/B testing to boost visibility, rankings, and user interaction.",
+    image: "talentcom.webp",
+    alt: "Landing page for Talent.com",
+    href: "https://www.talent.com/salary",
   },
   {
-    title: "PostCube",
-    year: "2022",
+    title: "Talent Right Partners",
+    tools: ["Wix"],
     description:
-      "Built a landing page for PostCube, a private mailbox service. Added an animated navigation bar, integrated a video section, and designed a user-friendly contact form using HTML, CSS/SCSS, and JavaScript.",
-    video: "postcube.mp4",
-    alt: "Landing page for PostCube",
-  },
-  {
-    title: "Wedding Website",
-    year: "2024",
-    description:
-      "Designed and built a personalized wedding site on Wix, reflecting the couple and venue. Included features like an RSVP form, integrated gift registry, and a photo slideshow. Created the layout and visuals in Figma.",
-    video: "wedding-website.mp4",
-    alt: "Landing page for a wedding",
+      "Designed and developed a modern multi-page website on Wix for Talent Right Partners (Career Coaching, Executive Search, and HR Consulting). Built in accessibility and SEO best practices, and included a user sign-up form for lead generation. Also created branded presentation templates and Facebook banners to ensure a cohesive online presence.",
+    image: "talentrightpartners.webp",
+    alt: "Landing page for Talent Right Partners",
+    href: "https://www.talentrightpartners.com/",
   },
   {
     title: "Blockchain",
-    year: "2022",
+    tools: ["JavaScript", "HTML", "CSS/SCSS"],
     description:
       "Coded a website for TopMonks Blockchain, a development studio focused on blockchain technologies. Built with HTML, CSS/SCSS, and JavaScript, featuring a responsive layout and modern UI elements.",
     image: "blockchain.webp",
@@ -34,11 +28,35 @@ export const projects = [
   },
   {
     title: "Coding for Kids",
-    year: "2022",
+    tools: ["JavaScript", "HTML", "CSS/SCSS"],
     description:
       "Created an interactive website to spark children’s interest in programming, technology, and robotics. The site was playful, colorful, and engaging, offering classes for kids of all ages. Built with HTML, CSS/SCSS, and JavaScript.",
     image: "for-kids.webp",
     alt: "Landing page for Coding for Kids",
     href: "https://prodeti.topmonks.cz/",
+  },
+  {
+    title: "TopMonks",
+    tools: ["JavaScript", "HTML", "CSS/SCSS"],
+    description:
+      "Developed the company’s bilingual landing page (Czech & English) with a responsive, mobile-friendly design. Implemented features like a sticky navigation bar, animated buttons, and smooth background transitions using HTML, CSS/SCSS, and JavaScript.",
+    image: "topmonks.webp",
+    alt: "Landing page for TopMonks",
+  },
+  {
+    title: "PostCube",
+    tools: ["JavaScript", "HTML", "CSS/SCSS"],
+    description:
+      "Built a landing page for PostCube, a private mailbox service. Added an animated navigation bar, integrated a video section, and designed a user-friendly contact form using HTML, CSS/SCSS, and JavaScript.",
+    video: "postcube.mp4",
+    alt: "Landing page for PostCube",
+  },
+  {
+    title: "Wedding Website",
+    tools: ["Wix"],
+    description:
+      "Designed and built a personalized wedding site on Wix, reflecting the couple and venue. Included features like an RSVP form, integrated gift registry, and a photo slideshow. Created the layout and visuals in Figma.",
+    video: "wedding-website.mp4",
+    alt: "Landing page for a wedding",
   },
 ];

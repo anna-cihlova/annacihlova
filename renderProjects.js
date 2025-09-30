@@ -45,10 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         </picture>
 
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-            </div>
+         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <h3>${project?.title}</h3>
+            <p>${project?.description}</p>
+            <ul class="project-skills">
+            ${project?.tools
+              .map((tool) => `<li class="skill-box">${tool}</li>`)
+              .join("")}
+              </ul>
+          </div>
         </${!project.href ? "div" : "a"}>
     `;
     container.insertAdjacentHTML("beforeend", projectHTML);

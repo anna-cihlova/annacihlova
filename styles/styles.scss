@@ -268,6 +268,7 @@ ul {
   color: color(secondary);
   width: fit-content;
   padding: 6px 18px;
+  white-space: nowrap;
 }
 
 .intro {
@@ -398,6 +399,7 @@ ul {
       gap: 20px;
       padding: 20px;
       margin-bottom: 20px;
+      border-radius: 12px;
       border: 1px solid transparent;
       h3,
       p {
@@ -408,13 +410,28 @@ ul {
         text-transform: uppercase;
       }
       p {
-        font-size: 1rem;
+        font-size: 1rem; // 16px
         margin-top: 4px;
         margin-bottom: 0;
+      }
+      .project-skills {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        li.skill-box {
+          font-size: 0.938rem; // 15px;
+          color: color(tertiary);
+          border-color: color(tertiary);
+        }
       }
       .project-poster {
         img,
         video {
+          border-radius: 4px;
+          filter: grayscale(1);
           margin-top: 5px;
           @media (max-width: 889px) {
             width: 100%;
@@ -435,7 +452,11 @@ ul {
           }
           img,
           video {
-            filter: grayscale(1);
+            filter: grayscale(0);
+          }
+          li.skill-box {
+            color: color(secondary);
+            border-color: color(secondary);
           }
         }
       }
