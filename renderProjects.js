@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${
             project.video
               ? `
-                <video width="180" autoplay loop muted playsinline>
+                <video width="180" autoplay loop muted playsinline preload="metadata" poster="assets/case-study/placeholder.webp">
                   <source src="assets/case-study/${project.video}" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
