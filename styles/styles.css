@@ -488,7 +488,8 @@ ul {
 
 #footer {
   font-size: 16px;
-  color: #f4f1e6;
+  font-weight: 500;
+  color: #ffffff;
   background-color: #ff3b00;
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -27,6 +27,7 @@ $colors: (
   secondary-light: #fa6a3e,
   secondary-lighter: #fae2db,
   tertiary: rgb(64, 89, 121),
+  white: #ffffff,
 );
 
 @function color($name) {
@@ -505,7 +506,8 @@ ul {
 
 #footer {
   font-size: 16px;
-  color: color(primary);
+  font-weight: 500;
+  color: color(white);
   background-color: color(secondary);
   padding-top: 1rem;
   padding-bottom: 1rem;
