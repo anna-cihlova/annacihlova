@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <article
           class="ai-blog-card"
           data-href="${blog.href}"
+          data-aos="fade-up"
+          data-aos-offset="120"
+          data-aos-duration="1000"
           tabindex="0"
           role="link"
           aria-label="Open ${blog.title}"

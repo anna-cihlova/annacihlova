@@ -422,6 +422,7 @@ ul {
     background-color: color(white);
     color: color(tertiary);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
 
     &:hover {
       transform: translateY(-4px);
@@ -450,6 +451,7 @@ ul {
     width: 100%;
     height: 240px;
     object-fit: cover;
+    border-radius: 12px 12px 0 0;
     border-bottom: 0.5px solid rgba(64, 89, 121, 0.12);
     pointer-events: none;
 
@@ -476,13 +478,16 @@ ul {
       margin-top: 0;
       text-transform: uppercase;
       color: color(tertiary);
+      transition: all 0.2s;
     }
 
     p {
+      flex: 1;
       margin-top: 10px;
       margin-bottom: 0;
       font-size: 1rem;
       color: color(tertiary);
+      transition: all 0.2s;
     }
 
     .project-skills {
@@ -493,6 +498,7 @@ ul {
       margin-bottom: 0;
 
       .skill-box {
+        transition: all 0.2s;
         font-size: 0.938rem;
         color: color(tertiary);
         border-color: color(tertiary);
