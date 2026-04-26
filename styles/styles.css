@@ -390,8 +390,8 @@ ul {
 .ai-blog .ai-blog-card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   min-height: 100%;
+  cursor: pointer;
   border-radius: 12px;
   border: 1px solid rgba(64, 89, 121, 0.18);
   background-color: #ffffff;
@@ -411,6 +411,10 @@ ul {
   border-color: #ff3b00;
   color: #ff3b00;
 }
+.ai-blog .ai-blog-card:focus-visible {
+  outline: 2px solid #ff3b00;
+  outline-offset: 3px;
+}
 .ai-blog .ai-blog-card__image {
   display: block;
   width: 100%;
@@ -418,6 +422,16 @@ ul {
   -o-object-fit: cover;
      object-fit: cover;
   border-bottom: 0.5px solid rgba(64, 89, 121, 0.12);
+  pointer-events: none;
+  /* Prevents stopping from smooth scrolling */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  /* Prevents selecting the image on long-press */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .ai-blog .ai-blog-card__body {
   display: flex;

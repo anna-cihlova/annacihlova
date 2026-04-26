@@ -22,39 +22,47 @@ document.addEventListener("DOMContentLoaded", () => {
   let visibleCount = Math.min(INITIAL_VISIBLE_COUNT, aiBlogs.length);
 
   const renderCards = () => {
-    container.innerHTML = aiBlogs
-      .slice(0, visibleCount)
-      .map(
-        (blog) => `
-          <a
-            href="${blog.href}"
-            class="ai-blog-card"
-            data-aos="fade-up"
-            data-aos-offset="120"
-            data-aos-duration="1000"
-          >
-            <img
-              src="${blog.image}"
-              alt="${blog.alt || blog.title}"
-              class="ai-blog-card__image"
-              width="720"
-              height="420"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="ai-blog-card__body">
-              <h3>${blog.title}</h3>
-              <p>${truncateText(blog.description, DESCRIPTION_LIMIT)}</p>
-              <ul class="project-skills">
-                ${blog.tools
-                  .map((tool) => `<li class="skill-box">${tool}</li>`)
-                  .join("")}
-              </ul>
-            </div>
-          </a>
-        `
-      )
-      .join("");
+    container.innerHTML = "";
+
+    aiBlogs.slice(0, visibleCount).forEach((blog) => {
+      const blogHTML = `
+        <article
+          class="ai-blog-card"
+          data-href="${blog.href}"
+          tabindex="0"
+          role="link"
+          aria-label="Open ${blog.title}"
+        >
+          <img
+            src="${blog.image}"
+            alt="${blog.alt || blog.title}"
+            class="ai-blog-card__image"
+            width="720"
+            height="420"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+          <div class="ai-blog-card__body">
+            <h3>${blog.title}</h3>
+            <p>${truncateText(blog.description, DESCRIPTION_LIMIT)}</p>
+            <ul class="project-skills">
+              ${blog.tools
+                .map((tool) => `<li class="skill-box">${tool}</li>`)
+                .join("")}
+            </ul>
+          </div>
+        </article>
+      `;
+
+      container.insertAdjacentHTML("beforeend", blogHTML);
+    });
+
+    container.querySelectorAll(".ai-blog-card").forEach((card) => {
+      card.removeAttribute("tabindex");
+      card.removeAttribute("role");
+      card.removeAttribute("aria-label");
+    });
 
     loadMoreButton.hidden = visibleCount >= aiBlogs.length;
 
@@ -64,7 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   loadMoreButton.addEventListener("click", () => {
-    visibleCount = Math.min(visibleCount + INITIAL_VISIBLE_COUNT, aiBlogs.length);
+    visibleCount = Math.min(
+      visibleCount + INITIAL_VISIBLE_COUNT,
+      aiBlogs.length,
+    );
     renderCards();
   });
 

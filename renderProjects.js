@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </video>
               `
               : project.image
-              ? `
+                ? `
                   <img
                     src="assets/case-study/${project.image}"
                     alt="${project.alt || "Project preview"}"
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     sizes="(max-width: 200px) 100vw, 180px"
                   />
                 `
-              : `
+                : `
                   <img
                     src="assets/case-study/placeholder.webp"
                     alt="${project.alt || "Placeholder preview"}"
