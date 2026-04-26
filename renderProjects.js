@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${
             project.video
               ? `
-                <video width="180" autoplay loop muted playsinline preload="metadata" poster="assets/case-study/placeholder.webp">
+                <video width="180" loop muted playsinline preload="metadata" poster="assets/case-study/${project.poster || project.image || "placeholder.webp"}">
                   <source src="assets/case-study/${project.video}" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -61,6 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </${!project.href ? "div" : "a"}>
     `;
+
     container.insertAdjacentHTML("beforeend", projectHTML);
+  });
+
+  container.querySelectorAll(".project").forEach((card) => {
+    const video = card.querySelector("video");
+
+    if (!video) {
+      return;
+    }
+
+    const playVideo = () => {
+      video.play().catch(() => {});
+    };
+
+    const stopVideo = () => {
+      video.pause();
+      video.currentTime = 0;
+      video.load();
+    };
+
+    card.addEventListener("mouseenter", playVideo);
+    card.addEventListener("mouseleave", stopVideo);
+    card.addEventListener("focusin", playVideo);
+    card.addEventListener("focusout", stopVideo);
   });
 });

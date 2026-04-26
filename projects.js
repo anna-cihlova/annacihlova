@@ -92,6 +92,7 @@ export const projects = [
     tools: ["JavaScript", "HTML", "CSS/SCSS"],
     description:
       "Built a landing page for PostCube, a private mailbox service. Added an animated navigation bar, integrated a video section, and designed a user-friendly contact form.",
+    poster: "postcube.webp",
     video: "postcube.mp4",
     alt: "Landing page for PostCube",
     in_production: false,
@@ -101,6 +102,7 @@ export const projects = [
     tools: ["Wix"],
     description:
       "Designed and built a personalized wedding site on Wix, reflecting the couple and venue. Included features like an RSVP form, integrated gift registry, and a photo slideshow. Created the layout and visuals in Figma.",
+    poster: "wedding-website.webp",
     video: "wedding-website.mp4",
     alt: "Landing page for a wedding",
     in_production: false,
