@@ -371,11 +371,25 @@ ul {
   text-align: center;
   margin: 0 auto;
 }
+@media (min-width: 1024px) {
+  .ai-blog .ai-blog-header h2 {
+    font-size: 140px;
+  }
+}
 .ai-blog .ai-blog-header .ai-blog-intro {
   color: rgb(64, 89, 121);
-  max-width: 50%;
   margin: 1rem auto;
   text-align: center;
+}
+@media screen and (min-width: 1025px) {
+  .ai-blog .ai-blog-header .ai-blog-intro {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 840px) {
+  .ai-blog .ai-blog-header .ai-blog-intro {
+    max-width: 75%;
+  }
 }
 .ai-blog .ai-blog-content {
   display: flex;

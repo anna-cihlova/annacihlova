@@ -391,12 +391,20 @@ ul {
     h2 {
       text-align: center;
       margin: 0 auto;
+      @media (min-width: 1024px) {
+        font-size: 140px;
+      }
     }
     .ai-blog-intro {
       color: color(tertiary);
-      max-width: 50%;
       margin: 1rem auto;
       text-align: center;
+      @media screen and (min-width: 1025px) {
+        max-width: 50%;
+      }
+      @media screen and (max-width: 1024px) and (min-width: 840px) {
+        max-width: 75%;
+      }
     }
   }
 
