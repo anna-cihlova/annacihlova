@@ -1,12 +1,31 @@
 export const projects = [
   {
     title: "Talent.com",
-    tools: ["JavaScript", "React.js", "TypeScript", "Next.js"],
+    tools: ["React.js", "JavaScript", "TypeScript", "Next.js"],
     description:
       "Built company subpages with reusable JavaScript, React, and TypeScript components, migrating designs into a Next.js application. Integrated API data for dynamic job search pages, improving navigation and engagement. Applied SEO best practices and led A/B testing to boost visibility, rankings, and user interaction.",
     image: "talentcom.webp",
     alt: "Landing page for Talent.com",
     href: "https://www.talent.com/salary",
+    in_production: true,
+  },
+  {
+    title: "CSPPM.cz",
+    tools: [
+      "Codex",
+      "React.js",
+      "i18next",
+      "JavaScript",
+      "HTML",
+      "CSS/SCSS",
+      "Vite",
+      "React Router",
+    ],
+    description:
+      "Built a multilingual website for a medical clinic using reusable JavaScript and React components, implementing a responsive design in a Vite-based application. Added localized content, client-side routing, and contact-focused sections while applying SEO best practices and performance optimizations for a fast, accessible browsing experience.",
+    image: "csppm.webp",
+    alt: "Landing page for CSPPM.cz",
+    href: "https://www.csppm.cz/",
     in_production: true,
   },
   {
@@ -21,7 +40,7 @@ export const projects = [
   },
   {
     title: "Talent Right Partners",
-    tools: ["Wix"],
+    tools: ["Wix", "JavaScript"],
     description:
       "Designed and developed a modern multi-page website on Wix for Talent Right Partners (Career Coaching, Executive Search, and HR Consulting). Built in accessibility and SEO best practices, and included a user sign-up form for lead generation. Also created branded presentation templates and Facebook banners to ensure a cohesive online presence.",
     image: "talentrightpartners.webp",
